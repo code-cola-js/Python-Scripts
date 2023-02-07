@@ -20,6 +20,5 @@ def modifyself(seltlist):
 
 
 if __name__ == "__main__":
-    get_file_name(
-        r"C:\Users\geniusShi\Desktop\英语 - 副本"  # 修改文件路径
+    get_file_name(r"C:\Users\geniusShi\Desktop\英语 - 副本")  # 修改文件路径
     modifyself(needmodify)
