@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Gitte代码托管" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Gitte代码托管/04前后端交互/402Git和Github基本使用/proj_02" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Gitte代码托管/04前后端交互/402Git和Github基本使用/project_01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SiYuancode/siyuan" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lb-office-editor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lb-office-editor/core/sdkjs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lb-office-editor/core/ui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/newRabbit/rabbit-shop-docs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/newRabbit/rabbit-vue3-ts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/newRabbit/rabbitSelf/vue3-ts-rabbit" vcs="Git" />
+  </component>
+</project>
