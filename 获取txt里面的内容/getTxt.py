@@ -1,6 +1,10 @@
 import re
 import os
-file_path = r"C:\Users\geniusShi\Desktop\test\2000"
+file_path = r"C:\Users\geniusShi\Desktop\英语 - 副本\1999"
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030')
+
 
 
 def cut_sentences(content):  # 实现分句的函数，content参数是传入的文本字符串
@@ -31,7 +35,9 @@ for file in os.listdir(file_path):
         file_name = os.path.splitext(file)[0]  # 获取文件名称
         path = os.path.join(file_path + '//' + file_name+'.txt')  # 获取文件路径
         with open(path,"r",encoding='utf-8') as f:
-            content = f.read()
+            contentarray = f.read().splitlines()
+            content = "".join(contentarray)
+            re.sub('\xa0' ,' ' ,content)
             print(content)
             each_sentence = cut_sentences(content)
             print(each_sentence)
@@ -40,7 +46,9 @@ for file in os.listdir(file_path):
                 print(111)
                 for i in range(len(each_sentence)):
                     print(each_sentence[i])
-                    f.write(each_sentence[i] + "\n")
+                    sentence = each_sentence[i]
+                    re.sub('\xa0' ,' ' ,sentence)
+                    f.write(sentence + "\n")
 
         # 提取“4.4 报告期内基金投资策略和运作分析”和“4.5 报告期内基金的业绩表现”之间的内容
         # re_str = r'4.4 报告期内基金投资策略和运作分析(.+)4.5 报告期内基金的业绩表现'
