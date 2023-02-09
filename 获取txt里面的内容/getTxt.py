@@ -1,6 +1,6 @@
 import re
 import os
-file_path = r"C:\Users\geniusShi\Desktop\英语 - 副本\1999"
+file_path = r"C:\Users\geniusShi\Desktop\英语 - 副本\英语2\2022"
 import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030')

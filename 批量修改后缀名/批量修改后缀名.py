@@ -8,17 +8,17 @@ def get_file_name(file_dir):
         print(files)
         for file in files:
             # print(file)# 扫描所有文件
-            if os.path.splitext(file)[1] == ".md":  # 提取出所有后缀名为html的文件
+            if os.path.splitext(file)[1] == ".txt":  # 提取出所有后缀名为html的文件
                 bbb = os.path.join(root, file)
                 needmodify.append(bbb)
 
 
 def modifyself(seltlist):
     for i in range(len(seltlist)):
-        newName = os.path.splitext(seltlist[i])[0] + ".txt"
+        newName = os.path.splitext(seltlist[i])[0] + ".doc"
         os.rename(seltlist[i], newName)
 
 
 if __name__ == "__main__":
-    get_file_name(r"C:\Users\geniusShi\Desktop\英语 - 副本")  # 修改文件路径
+    get_file_name(r"C:\Users\geniusShi\Desktop\1999") # 修改文件路径
     modifyself(needmodify)
