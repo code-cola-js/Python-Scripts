@@ -1,7 +1,7 @@
 import genanki
 import xlrd
 import os
-rootPath = r"C:\Users\geniusShi\Desktop\1999-2009分句\1999"
+rootPath = r"C:\Users\geniusShi\Desktop\01.Excel版本1999-2009分句\2009"
 
 
 

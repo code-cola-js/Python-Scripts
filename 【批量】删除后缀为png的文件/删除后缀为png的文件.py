@@ -12,7 +12,7 @@ def get_file_name(file_dir):
         print(files)
         for file in files:
             # print(file)# 扫描所有文件
-            if os.path.splitext(file)[1] == ".docx":  # 提取出所有后缀名为md的文件
+            if os.path.splitext(file)[1] == ".xlsx":  # 提取出所有后缀名为md的文件
                 bbb = os.path.join(root, file)
                 needremove.append(bbb)
 
@@ -24,5 +24,5 @@ def removeself(seltlist):
 
 if __name__ == "__main__":
     get_file_name(
-        r"C:\Users\geniusShi\Nutstore\1\我的坚果云\A知识库HTML\技术\01.尚硅谷Vue2Vue3全家桶代码")  # 修改文件路径
+        r"C:\Users\geniusShi\Desktop\01.Excel版本1999-2009分句")  # 修改文件路径
     removeself(needremove)
