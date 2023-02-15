@@ -7,12 +7,13 @@ import os
 rootPath = r"C:\Users\geniusShi\Desktop\01.Excel版本1999-2009分句\1999"
 
 
-def read_xlsx(path ,path2):
+def read_xlsx(path ,path2, file_name):
     workbook = xlrd.open_workbook(path)
     Words = workbook.sheet_by_name("Sheet1")
     rows = Words.nrows
 
     # 便利了excel中 第一行 所有的单词
+    outer_obj = {}
     self_array = []
     for x in range(0, rows):
         self_json = {}
@@ -21,8 +22,10 @@ def read_xlsx(path ,path2):
         self_json["english"] = Words.row(x)[0].value
         self_json["translate"] = Words.row(x)[1].value
         self_array.append(self_json)
+        outer_obj["text"] = file_name
+        outer_obj[file_name] = self_array
         with open(path2, 'w') as f:
-            json.dump(self_array, f)
+            json.dump(outer_obj, f)
 
 
 if __name__ == '__main__':
@@ -34,5 +37,5 @@ if __name__ == '__main__':
             path2 = os.path.join(rootPath + '//' + file_name+'.json')  # 获取文件路径
             print(path)
             print(path2)
-            read_xlsx(path, path2)
+            read_xlsx(path, path2, file_name)
 
