@@ -4,7 +4,7 @@ import xlrd
 import os
 
 
-rootPath = r"C:\Users\geniusShi\Desktop\01.Excel版本1999-2009分句\1999"
+rootPath = r"C:\Users\geniusShi\Desktop\01.Excel版本1999-2009分句\2009"
 
 
 def read_xlsx(path ,path2, file_name):
