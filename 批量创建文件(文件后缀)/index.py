@@ -4,6 +4,6 @@ fileSuffix = '.txt' #文件后缀
 fileNum = 11 #文件个数
 for i in range(fileNum):
     # filePrefix转为数字与i相加后再转为字符串
-    fileName = str(int(filePrefix) + i) + fileSuffix
+    fileName = str(int(filePrefix) + i) + "中文" + fileSuffix
     with open(fileName, 'w') as f:
         f.write('')
