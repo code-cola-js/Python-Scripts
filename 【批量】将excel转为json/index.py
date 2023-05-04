@@ -1,10 +1,9 @@
 import json
-import genanki
 import xlrd
 import os
 
 
-rootPath = r"C:\Users\geniusShi\Desktop\01.Excel版本1999-2009分句\2009"
+rootPath = r"D:\myspace\anki-all\额外的东西"
 
 
 def read_xlsx(path ,path2, file_name):
@@ -33,8 +32,8 @@ if __name__ == '__main__':
         suff_name = os.path.splitext(file)[1]  # 获取文件后缀
         if suff_name == '.xlsx':
             file_name = os.path.splitext(file)[0]  # 获取文件名称
-            path = os.path.join(rootPath + '//' + file_name+'.xlsx')  # 获取文件路径
-            path2 = os.path.join(rootPath + '//' + file_name+'.json')  # 获取文件路径
+            path = os.path.join(rootPath + '\\' + file_name+'.xlsx')  # 获取文件路径
+            path2 = os.path.join(rootPath + '\\' + file_name+'.json')  # 获取文件路径
             print(path)
             print(path2)
             read_xlsx(path, path2, file_name)
