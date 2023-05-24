@@ -1,7 +1,7 @@
 from openpyxl import Workbook
 import os
 
-rootPath = r"C:\Users\geniusShi\Desktop\1999-2009分句\1999"
+rootPath = r"D:\myspace\anki-all\额外的东西"
 
 
 for file in os.listdir(rootPath):
