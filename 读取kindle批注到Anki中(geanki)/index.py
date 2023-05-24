@@ -23,29 +23,20 @@ my_model = genanki.Model(
         },
     ])
 
+each_Card_first_str = []
 
-def read_xlsx():
-    workbook = xlrd.open_workbook(r"D:\AFiles\PythonPandocMDToPdf\test.xlsx")
-    Words = workbook.sheet_by_name("Sheet1")
-    rows = Words.nrows
-    print(rows)
-    word_list = []
+each_Card_Tags = []
 
-    # 便利了excel中 第一行 所有的单词
-    for x in range(0, rows):
-        # 获得第一列的内容
-        first_str = Words.row(x)[0].value
-        # 获得第二列的内容
-        second_str = Words.row(x)[1].value
+def add_To_Anki():
+    for i in range(len(each_Card_first_str)):
         my_note = genanki.Note(
             model=my_model,
-            fields=[first_str, second_str])
-        
+            fields=[each_Card_first_str[i], each_Card_Tags[i]])
+
         my_deck.add_note(my_note)
-    print('list:', word_list)
     my_package = genanki.Package(my_deck)
-    
     my_package.write_to_file("4500.apkg")
+
 
 
 def read_txt():
@@ -53,8 +44,15 @@ def read_txt():
         lines = f.read().splitlines()
         for i, line in enumerate(lines):
             line = line.replace('\ufeff', '')
-            if(i % 5 == 4):
-                print(line)
+
+            first_str = ''
+            tags = ''
+            if(i % 5 == 0):
+                each_Card_Tags.append(line)
+            if(i % 5 == 3):
+                each_Card_first_str.append(line)
+    add_To_Anki()
+
 
 
 
