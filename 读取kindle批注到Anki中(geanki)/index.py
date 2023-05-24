@@ -3,7 +3,7 @@ import xlrd
 
 my_deck = genanki.Deck(
     2059400110,
-    'Kindle读书笔记')
+    '0200Kindle读书笔记')
 
 # anki 的牌model 可以根据自己的想法设置
 my_model = genanki.Model(
