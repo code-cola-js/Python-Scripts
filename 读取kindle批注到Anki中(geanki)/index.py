@@ -43,7 +43,7 @@ def add_To_Anki():
 
 
 def read_txt():
-    with open(r"test.txt", "r", encoding="utf-8-sig") as f:
+    with open(r"My Clippings - Kindle.txt", "r", encoding="utf-8-sig") as f:
         lines = f.read().splitlines()
         for i, line in enumerate(lines):
             line = line.replace('\ufeff', '')
