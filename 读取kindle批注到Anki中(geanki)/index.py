@@ -3,11 +3,11 @@ import xlrd
 
 my_deck = genanki.Deck(
     2059400110,
-    '英语(二) 4500单词')
+    'Kindle读书笔记')
 
 # anki 的牌model 可以根据自己的想法设置
 my_model = genanki.Model(
-    1091735104,
+    1091735104557,
     'Simple Model with Media',
     # 这里是传入fields 的变量代名
     fields=[
@@ -17,9 +17,9 @@ my_model = genanki.Model(
     # 直接将你传入的 变量 通过代名 写入模版 html还是很好理解的
     templates=[
         {
-            'name': 'Card 1',
+            'name': 'kindleReadingNote',
             'qfmt': '{{Question}}<br>',  # AND THIS
-            'afmt': '{{FrontSide}}<hr id="answer">{{Answer}}<hr id="text">',
+            'afmt': '{{FrontSide}}<hr id="answer">{{Answer}}',
         },
     ])
 
@@ -28,14 +28,17 @@ each_Card_first_str = []
 each_Card_Tags = []
 
 def add_To_Anki():
+    empty = ""
     for i in range(len(each_Card_first_str)):
         my_note = genanki.Note(
             model=my_model,
-            fields=[each_Card_first_str[i], each_Card_Tags[i]])
+            fields=[each_Card_first_str[i], ""],
+            tags=[each_Card_Tags[i].replace(" ", "")]
+            )
 
         my_deck.add_note(my_note)
     my_package = genanki.Package(my_deck)
-    my_package.write_to_file("4500.apkg")
+    my_package.write_to_file("kindle读书笔记本地.apkg")
 
 
 
