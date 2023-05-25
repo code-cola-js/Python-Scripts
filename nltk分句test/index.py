@@ -3,7 +3,7 @@ import re
 from nltk.tokenize import sent_tokenize
 from nltk.tokenize import word_tokenize
 from nltk.corpus import brown
- 
+
 brown.categories()
 s = '近日，中国短道速滑队队员@武大靖,在直播中歪嘴喝水的画面走红,此后他本人还亲自教学。于是，短道速滑国家队的成员们相继挑战,还出了一人炫三瓶的升级版。网友：终于找到进短道速滑队的方法！'
 s1 = '''
@@ -38,14 +38,14 @@ print("中文分句", sent_tokenize(s))
 print("英文分词", englishTokens)
 print("中文分句", sent_tokenize(s))
 print("中文分词", chineseTokens)
- 
+
 # 词性标注
 # 分词之后才可以进行词性标注
 englishTags = nltk.pos_tag(englishTokens)
 chineseTags = nltk.pos_tag(chineseTokens)
 print("英文词性标注", englishTags)
 print("中文词性标注", chineseTags)
- 
+
 # 情感分析
 #compound表示复杂程度,neu表示中性,neg表示负面情绪,pos表示正面情绪
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
