@@ -11,13 +11,13 @@ with open(resultpath, "rb") as f:
             a.append(line)
         else:
             b.append(line)
-        
+
 
 
 
 # 说明：需要写入的是二维列表target_data
 # 将数据写入excel表格
-workbook = Workbook() 
+workbook = Workbook()
 sheet0 = workbook.create_sheet(index=0) # 创建sheet0
 sheet0.column_dimensions['A'].width=15 # 设置A列宽度
 sheet0.column_dimensions['B'].width=22 # 设置B列宽度
